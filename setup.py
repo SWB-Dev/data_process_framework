@@ -7,7 +7,12 @@ setup(
     url="",
     author="Steven Barnes",
     author_email="steven.barnes@swbdevelopment.com",
-    packages=['dataprocess','dataprocess.abstractions','dataprocess.helpers','dataprocess.utilities'],
+    packages=[
+      'dataprocess',
+      'dataprocess.abstractions',
+    #   'dataprocess.helpers',
+      'dataprocess.utilities'
+    ],
     install_requires=[
         # 'pandas>=1.4.2',
         # 'openpyxl>=3.0.7'
