@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="data-process-framework",
-    version="0.2.2",
+    version="0.2.3",
     description="Framework for creating data processes.",
     url="",
     author="Steven Barnes",
