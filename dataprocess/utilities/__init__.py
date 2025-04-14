@@ -2,4 +2,4 @@ from dataprocess.abstractions import ExecutionFlags
 from .strategy_data_retreiver import StrategyDataRetreiver
 from .strategy_data_updater import  StrategyDataUpdater
 from .strategy_data_processor import StrategyDataProcessor
-from .dataprocess_base import DataProcessBase
+from .dataprocess_base import DataProcessBase, generate_dataprocess
