@@ -113,12 +113,35 @@ def test_dataprocess_adds_another():
     dp.run()
     dp.toggle_announce()
 
+def test_dataprocess_generates_default_script():
+    """"""
+    import os
+    import time
+
+    folder = os.path.dirname(__file__)
+    fpath = dp.generate_dataprocess(folder)
+
+    while not os.path.exists(fpath):
+        time.sleep(0.25)
+
+    with open(fpath, "r") as f:
+        data = f.read()
+
+    os.remove(fpath)
+
+    from dataprocess.utilities.dataprocess_base import _DEFAULT_DATAPROCESSBASE
+
+    if data != _DEFAULT_DATAPROCESSBASE:
+        raise AssertionError("Failed to generate the correct default script.")
+    
+    print(f"Passed: test_dataprocess_generates_default_script")
 
 def main():
     setup()
     test_multiple_data_process_unique_kwargs()
     test_complex_constructor()
     test_dataprocess_adds_another()
+    test_dataprocess_generates_default_script()
 
 if __name__ == "__main__":
     main()

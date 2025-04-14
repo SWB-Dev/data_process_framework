@@ -11,7 +11,7 @@ from .abstractions.IDataUpdateStrategy import IDataUpdateStrategy
 from .utilities.strategy_data_processor import StrategyDataProcessor
 from .utilities.strategy_data_retreiver import StrategyDataRetreiver
 from .utilities.strategy_data_updater import StrategyDataUpdater
-from .utilities.dataprocess_base import DataProcessBase
+from .utilities.dataprocess_base import DataProcessBase, generate_dataprocess
 
 class g:
     ANNOUNCE:bool = True
